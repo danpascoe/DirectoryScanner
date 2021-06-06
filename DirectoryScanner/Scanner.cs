@@ -145,7 +145,13 @@ namespace DirectoryScanner
             }
 
             DateTime dt;
-            
+
+            if (String.IsNullOrEmpty(Properties.Settings.Default.LastRun.ToString()))
+            {
+                Properties.Settings.Default.LastRun = DateTime.MinValue;
+                Properties.Settings.Default.Save();
+            }
+
             // Gets the date to check files against. If cbUseLastRun is checked, it will get from saved properties
             // If not, it will use the date the user has selected
             if (cbUseLastRun.Checked) { dt = Properties.Settings.Default.LastRun; } 
