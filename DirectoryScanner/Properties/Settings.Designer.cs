@@ -117,5 +117,17 @@ namespace DirectoryScanner.Properties {
                 this["EmailFrom"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string OnlyCheck {
+            get {
+                return ((string)(this["OnlyCheck"]));
+            }
+            set {
+                this["OnlyCheck"] = value;
+            }
+        }
     }
 }

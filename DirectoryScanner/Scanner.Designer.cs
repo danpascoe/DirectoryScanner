@@ -37,6 +37,9 @@ namespace DirectoryScanner
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnAbout = new System.Windows.Forms.Button();
             this.pnlSettings = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbOnlyCheck = new System.Windows.Forms.TextBox();
+            this.lblSettingsTitle = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tbSettingsMSPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,7 +66,11 @@ namespace DirectoryScanner
             this.lblLogLocation = new System.Windows.Forms.Label();
             this.tbLog = new System.Windows.Forms.TextBox();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lblSettingsTitle = new System.Windows.Forms.Label();
+            this.cbUseLastRun = new System.Windows.Forms.CheckBox();
+            this.lblCMS = new System.Windows.Forms.Label();
+            this.datepicker = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbOnlyCheckDir = new System.Windows.Forms.TextBox();
             this.pnlLeftNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -166,10 +173,15 @@ namespace DirectoryScanner
             this.btnAbout.Size = new System.Drawing.Size(59, 57);
             this.btnAbout.TabIndex = 3;
             this.btnAbout.UseVisualStyleBackColor = false;
+            this.btnAbout.Visible = false;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // pnlSettings
             // 
+            this.pnlSettings.Controls.Add(this.label7);
+            this.pnlSettings.Controls.Add(this.tbOnlyCheckDir);
+            this.pnlSettings.Controls.Add(this.label6);
+            this.pnlSettings.Controls.Add(this.tbOnlyCheck);
             this.pnlSettings.Controls.Add(this.lblSettingsTitle);
             this.pnlSettings.Controls.Add(this.label5);
             this.pnlSettings.Controls.Add(this.tbSettingsMSPassword);
@@ -193,11 +205,38 @@ namespace DirectoryScanner
             this.pnlSettings.Name = "pnlSettings";
             this.pnlSettings.Size = new System.Drawing.Size(792, 528);
             this.pnlSettings.TabIndex = 7;
+            this.pnlSettings.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 149);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 17);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Only Check (File)";
+            // 
+            // tbOnlyCheck
+            // 
+            this.tbOnlyCheck.Location = new System.Drawing.Point(180, 146);
+            this.tbOnlyCheck.Name = "tbOnlyCheck";
+            this.tbOnlyCheck.Size = new System.Drawing.Size(491, 22);
+            this.tbOnlyCheck.TabIndex = 19;
+            // 
+            // lblSettingsTitle
+            // 
+            this.lblSettingsTitle.AutoSize = true;
+            this.lblSettingsTitle.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSettingsTitle.Location = new System.Drawing.Point(20, 19);
+            this.lblSettingsTitle.Name = "lblSettingsTitle";
+            this.lblSettingsTitle.Size = new System.Drawing.Size(209, 32);
+            this.lblSettingsTitle.TabIndex = 18;
+            this.lblSettingsTitle.Text = "Set Default Values";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 385);
+            this.label5.Location = new System.Drawing.Point(17, 420);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 17);
             this.label5.TabIndex = 17;
@@ -205,7 +244,7 @@ namespace DirectoryScanner
             // 
             // tbSettingsMSPassword
             // 
-            this.tbSettingsMSPassword.Location = new System.Drawing.Point(180, 385);
+            this.tbSettingsMSPassword.Location = new System.Drawing.Point(180, 420);
             this.tbSettingsMSPassword.Name = "tbSettingsMSPassword";
             this.tbSettingsMSPassword.Size = new System.Drawing.Size(491, 22);
             this.tbSettingsMSPassword.TabIndex = 16;
@@ -213,7 +252,7 @@ namespace DirectoryScanner
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 346);
+            this.label3.Location = new System.Drawing.Point(17, 381);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 17);
             this.label3.TabIndex = 15;
@@ -221,7 +260,7 @@ namespace DirectoryScanner
             // 
             // tbSettingsMSUsername
             // 
-            this.tbSettingsMSUsername.Location = new System.Drawing.Point(180, 346);
+            this.tbSettingsMSUsername.Location = new System.Drawing.Point(180, 381);
             this.tbSettingsMSUsername.Name = "tbSettingsMSUsername";
             this.tbSettingsMSUsername.Size = new System.Drawing.Size(491, 22);
             this.tbSettingsMSUsername.TabIndex = 14;
@@ -229,7 +268,7 @@ namespace DirectoryScanner
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 303);
+            this.label4.Location = new System.Drawing.Point(17, 338);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 17);
             this.label4.TabIndex = 13;
@@ -237,7 +276,7 @@ namespace DirectoryScanner
             // 
             // tbSettingsMSHost
             // 
-            this.tbSettingsMSHost.Location = new System.Drawing.Point(180, 305);
+            this.tbSettingsMSHost.Location = new System.Drawing.Point(180, 340);
             this.tbSettingsMSHost.Name = "tbSettingsMSHost";
             this.tbSettingsMSHost.Size = new System.Drawing.Size(491, 22);
             this.tbSettingsMSHost.TabIndex = 12;
@@ -245,7 +284,7 @@ namespace DirectoryScanner
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 219);
+            this.label1.Location = new System.Drawing.Point(17, 299);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 17);
             this.label1.TabIndex = 11;
@@ -253,7 +292,7 @@ namespace DirectoryScanner
             // 
             // tbSettingsEmailFrom
             // 
-            this.tbSettingsEmailFrom.Location = new System.Drawing.Point(180, 219);
+            this.tbSettingsEmailFrom.Location = new System.Drawing.Point(180, 299);
             this.tbSettingsEmailFrom.Name = "tbSettingsEmailFrom";
             this.tbSettingsEmailFrom.Size = new System.Drawing.Size(491, 22);
             this.tbSettingsEmailFrom.TabIndex = 10;
@@ -261,7 +300,7 @@ namespace DirectoryScanner
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 178);
+            this.label2.Location = new System.Drawing.Point(17, 258);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 8;
@@ -269,7 +308,7 @@ namespace DirectoryScanner
             // 
             // tbSettingsEmailTo
             // 
-            this.tbSettingsEmailTo.Location = new System.Drawing.Point(180, 178);
+            this.tbSettingsEmailTo.Location = new System.Drawing.Point(180, 258);
             this.tbSettingsEmailTo.Name = "tbSettingsEmailTo";
             this.tbSettingsEmailTo.Size = new System.Drawing.Size(491, 22);
             this.tbSettingsEmailTo.TabIndex = 7;
@@ -295,9 +334,9 @@ namespace DirectoryScanner
             // 
             // tbSettingsLogLocation
             // 
-            this.tbSettingsLogLocation.Location = new System.Drawing.Point(130, 106);
+            this.tbSettingsLogLocation.Location = new System.Drawing.Point(180, 106);
             this.tbSettingsLogLocation.Name = "tbSettingsLogLocation";
-            this.tbSettingsLogLocation.Size = new System.Drawing.Size(541, 22);
+            this.tbSettingsLogLocation.Size = new System.Drawing.Size(491, 22);
             this.tbSettingsLogLocation.TabIndex = 4;
             // 
             // btnSettingsDirectory
@@ -321,16 +360,16 @@ namespace DirectoryScanner
             // 
             // tbSettingsDirectory
             // 
-            this.tbSettingsDirectory.Location = new System.Drawing.Point(130, 65);
+            this.tbSettingsDirectory.Location = new System.Drawing.Point(180, 65);
             this.tbSettingsDirectory.Name = "tbSettingsDirectory";
-            this.tbSettingsDirectory.Size = new System.Drawing.Size(541, 22);
+            this.tbSettingsDirectory.Size = new System.Drawing.Size(491, 22);
             this.tbSettingsDirectory.TabIndex = 1;
             // 
             // btnSettingsSave
             // 
-            this.btnSettingsSave.Location = new System.Drawing.Point(552, 441);
+            this.btnSettingsSave.Location = new System.Drawing.Point(603, 463);
             this.btnSettingsSave.Name = "btnSettingsSave";
-            this.btnSettingsSave.Size = new System.Drawing.Size(227, 73);
+            this.btnSettingsSave.Size = new System.Drawing.Size(176, 51);
             this.btnSettingsSave.TabIndex = 0;
             this.btnSettingsSave.Text = "Save";
             this.btnSettingsSave.UseVisualStyleBackColor = true;
@@ -416,6 +455,9 @@ namespace DirectoryScanner
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.cbUseLastRun);
+            this.pnlMain.Controls.Add(this.lblCMS);
+            this.pnlMain.Controls.Add(this.datepicker);
             this.pnlMain.Controls.Add(this.tbLog);
             this.pnlMain.Controls.Add(this.lblLogLocation);
             this.pnlMain.Controls.Add(this.lblDirectory);
@@ -430,15 +472,55 @@ namespace DirectoryScanner
             this.pnlMain.Size = new System.Drawing.Size(792, 528);
             this.pnlMain.TabIndex = 8;
             // 
-            // lblSettingsTitle
+            // cbUseLastRun
             // 
-            this.lblSettingsTitle.AutoSize = true;
-            this.lblSettingsTitle.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSettingsTitle.Location = new System.Drawing.Point(20, 19);
-            this.lblSettingsTitle.Name = "lblSettingsTitle";
-            this.lblSettingsTitle.Size = new System.Drawing.Size(209, 32);
-            this.lblSettingsTitle.TabIndex = 18;
-            this.lblSettingsTitle.Text = "Set Default Values";
+            this.cbUseLastRun.AutoSize = true;
+            this.cbUseLastRun.Checked = true;
+            this.cbUseLastRun.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbUseLastRun.Location = new System.Drawing.Point(20, 441);
+            this.cbUseLastRun.Name = "cbUseLastRun";
+            this.cbUseLastRun.Size = new System.Drawing.Size(136, 21);
+            this.cbUseLastRun.TabIndex = 10;
+            this.cbUseLastRun.Text = "Use last run time";
+            this.cbUseLastRun.UseVisualStyleBackColor = true;
+            this.cbUseLastRun.CheckedChanged += new System.EventHandler(this.cbUseLastRun_CheckedChanged);
+            // 
+            // lblCMS
+            // 
+            this.lblCMS.AutoSize = true;
+            this.lblCMS.Location = new System.Drawing.Point(20, 474);
+            this.lblCMS.Name = "lblCMS";
+            this.lblCMS.Size = new System.Drawing.Size(145, 17);
+            this.lblCMS.TabIndex = 9;
+            this.lblCMS.Text = "Check modified since:";
+            this.lblCMS.Visible = false;
+            // 
+            // datepicker
+            // 
+            this.datepicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datepicker.Location = new System.Drawing.Point(180, 474);
+            this.datepicker.Name = "datepicker";
+            this.datepicker.Size = new System.Drawing.Size(109, 22);
+            this.datepicker.TabIndex = 8;
+            this.datepicker.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 17);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Only Check (Dir)";
+            this.label7.Visible = false;
+            // 
+            // tbOnlyCheckDir
+            // 
+            this.tbOnlyCheckDir.Location = new System.Drawing.Point(180, 183);
+            this.tbOnlyCheckDir.Name = "tbOnlyCheckDir";
+            this.tbOnlyCheckDir.Size = new System.Drawing.Size(491, 22);
+            this.tbOnlyCheckDir.TabIndex = 21;
+            this.tbOnlyCheckDir.Visible = false;
             // 
             // Scanner
             // 
@@ -446,8 +528,8 @@ namespace DirectoryScanner
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1069, 579);
-            this.Controls.Add(this.pnlSettings);
             this.Controls.Add(this.pnlMain);
+            this.Controls.Add(this.pnlSettings);
             this.Controls.Add(this.pnlLeftNav);
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -501,5 +583,12 @@ namespace DirectoryScanner
         private Label label2;
         private TextBox tbSettingsEmailTo;
         private Label lblSettingsTitle;
+        private Label label6;
+        private TextBox tbOnlyCheck;
+        private Label lblCMS;
+        private DateTimePicker datepicker;
+        private CheckBox cbUseLastRun;
+        private Label label7;
+        private TextBox tbOnlyCheckDir;
     }
 }

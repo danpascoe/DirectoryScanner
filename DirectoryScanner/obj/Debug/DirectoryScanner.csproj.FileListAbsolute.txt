@@ -1,0 +1,17 @@
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\bin\Debug\DirectoryScanner.exe.config
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\bin\Debug\DirectoryScanner.exe
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\bin\Debug\DirectoryScanner.pdb
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.Properties.Resources.resources
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.Scanner.resources
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.csproj.GenerateResource.cache
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.csproj.CoreCompileInputs.cache
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.exe
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.pdb
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\bin\Debug\Newtonsoft.Json.dll
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\bin\Debug\Newtonsoft.Json.xml
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.csproj.CopyComplete
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\bin\Debug\DirectoryScanner.exe.manifest
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\bin\Debug\DirectoryScanner.application
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.exe.manifest
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.application
+D:\Documents (D)\Development\DirectoryScanner\DirectoryScanner\DirectoryScanner\obj\Debug\DirectoryScanner.csprojAssemblyReference.cache
