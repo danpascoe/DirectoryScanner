@@ -1,20 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
-using System.Net.Mail;
-using System.Net;
-using System.Runtime.Remoting.Messaging;
-using System.Collections.Specialized;
-using System.Security.Cryptography.X509Certificates;
 
 namespace DirectoryScanner
 {

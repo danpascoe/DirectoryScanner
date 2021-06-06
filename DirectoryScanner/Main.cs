@@ -4,10 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace DirectoryScanner
 {
